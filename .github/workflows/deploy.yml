@@ -1,0 +1,25 @@
+name: build-and-deploy
+
+on: push
+
+jobs:
+  build:
+    name: Build static site
+    runs-on: ubuntu-latest
+    env:
+      working-directory: ./site
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Build site
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: "2.6"
+      - run: gem install bundler
+        working-directory: ${{env.working-directory}}
+      - run: bundle config path vendor/bundle
+        working-directory: ${{env.working-directory}}
+      - run: bundle install --jobs 4 --retry 3
+        working-directory: ${{env.working-directory}}
+      - run: bundle exec jekyll build
+        working-directory: ${{env.working-directory}}
