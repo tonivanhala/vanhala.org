@@ -15,6 +15,12 @@ jobs:
         uses: actions/setup-ruby@v1
         with:
           ruby-version: "2.6"
+      - uses: actions/cache@v2
+        with:
+          path: ${{env.working-directory}}/vendor/bundle
+          key: ${{runner.os}}-gems-${{hashFiles('**/Gemfile.lock')}}
+          restore-keys: |
+            ${{runner.os}}-gems-
       - run: gem install bundler
         working-directory: ${{env.working-directory}}
       - run: bundle config path vendor/bundle
