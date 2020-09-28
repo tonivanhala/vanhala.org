@@ -22,8 +22,8 @@ title: Naming Things
 author: Toni Vanhala
 
 navbar-links:
-  CV: "cv"
-  About Me: "about"
+  CV: "cv.html"
+  About Me: "about.html"
 
 avatar: "/assets/images/potretti.jpg"
 round-avatar: true
