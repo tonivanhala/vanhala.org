@@ -29,8 +29,8 @@ permalink: /cv/
 
 - Ph.D. (Interactive Technology), University of Tampere, 2011
   * thesis approved with distinction (top 10%)
-- Master of Science (Interactive Technology), University of Tampere, 2005
-  * avg. grade in Computer Science and Interactive Technology 5.0 (scale 1-5)
+- M.Sc. (Interactive Technology), University of Tampere, 2005
+  * major in Computer Science and Interactive Technology (avg. 5.0, scale 1-5)
 
 ## Selected projects
 
@@ -56,9 +56,14 @@ permalink: /cv/
 |Project lead and developer for scalable services deployment. Setting up onboarding and recruitment
 |Scala, Spring, Clojure, AWS, Postgresql
 
-|Full-stack Developer
+|Project Lead and Backend Developer
+|11/2017 -- 01/2018
+|Employee health care portal
+|TypeScript, Node.js, SQL Server
+
+|Fullstack Developer
 |2016 -- 2018 (16 mo.)
-|Full-stack developer for apartment rental service
+|Fullstack developer for apartment rental service
 |JavaScript, React, Clojure, Elasticsearch, Contentful, Docker, AWS, Rancher
 
 |Project Lead
@@ -68,7 +73,7 @@ permalink: /cv/
 
 |CEO, Development Lead
 |01/2014 -- 08/2018
-|Leading development of online mental health support for Finnish and UK market
+|Lead developer of online mental health support for Finnish and UK market
 |Python, Django, jQuery, Lean Startup
 
 |Team Leader
