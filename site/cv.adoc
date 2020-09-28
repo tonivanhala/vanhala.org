@@ -13,7 +13,7 @@ title: CV
   * AWS, Azure, Google Cloud, on-premise container orchestration
 - Specific domains
   * IoT, data analysis, signal processing, health and wellbeing
-  * startups, SME enterprises, large enterprise customers
+  * startups, SMEs, large enterprise customers
 
 ## Employment
 
