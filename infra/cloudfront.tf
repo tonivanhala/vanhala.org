@@ -49,6 +49,8 @@ resource "aws_cloudfront_distribution" "vanhalaorg_distribution" {
   http_version = "http2"
   default_root_object = "index.html"
 
+  aliases = ["vanhala.org"]
+
   default_cache_behavior {
     allowed_methods = ["GET", "HEAD", "OPTIONS"]
     cached_methods = ["GET", "HEAD"]
@@ -80,6 +82,7 @@ resource "aws_cloudfront_distribution" "vanhalaorg_distribution" {
   }
 
   viewer_certificate {
-    cloudfront_default_certificate = true
+    acm_certificate_arn = aws_acm_certificate.default.arn
+    ssl_support_method = "sni-only"
   }
 }
