@@ -20,6 +20,7 @@
 
 title: Naming Things
 author: Toni Vanhala
+baseurl: "/"
 
 navbar-links:
   CV: "cv.html"
