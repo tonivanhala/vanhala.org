@@ -4,15 +4,10 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Hello there!
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+I'm Toni Vanhala and I like computers. I got my first when I was four years old. Since then, I've been programming for fun and/or profit.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+This spot on the internet is the place where I share experiences from 20 or so years of professional software development, project management, and team work, and some memories from almost as many years of non-professional hacking before. 
 
-
-[jekyll-organization]: https://github.com/jekyll
+I'm inspired by cool technologies, but collaboration and working in a productive team are the icing on the cake and cherry on the top. Luckily, I've had the privilege of experiencing both. In teams I've worked with, we've built our own gaze trackers for hands-free UIs, predicted emotional reactions from physiology, provided effective mental health support for depression and anxiety, fine-tuned processing of health and IoT data for performance and reliability, and automated quality control in business critical processes. Cool stuff and many stories to tell!
