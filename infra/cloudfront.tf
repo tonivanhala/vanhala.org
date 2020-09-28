@@ -1,30 +1,52 @@
-resource "aws_s3_bucket" "site_bucket" {
-  bucket = "vanhalaorg-site"
-  acl = "private"
-  tags = {
-    vanhalaorg = ""
+locals {
+  site_bucket_id = "vanhalaorg-site"
+  vanhalaorg_origin_id = "vanhalaOrgS3Origin"
+}
+
+data "aws_iam_policy_document" "website_policy" {
+  statement {
+    actions = [
+      "s3:GetObject"
+    ]
+    principals {
+      identifiers = ["*"]
+      type = "AWS"
+    }
+    resources = [
+      "arn:aws:s3:::${local.site_bucket_id}/*"
+    ]
   }
 }
 
-locals {
-  vanhalaorg_origin_id = "vanhalaOrgS3Origin"
-
+resource "aws_s3_bucket" "site_bucket" {
+  bucket = local.site_bucket_id
+  acl = "public-read"
+  policy = data.aws_iam_policy_document.website_policy.json
+  website {
+    index_document = "index.html"
+  }
+  tags = {
+    vanhalaorg = ""
+  }
 }
 
 resource "aws_cloudfront_origin_access_identity" "origin_access_identity" {}
 
 resource "aws_cloudfront_distribution" "vanhalaorg_distribution" {
   origin {
-    domain_name = aws_s3_bucket.site_bucket.bucket_regional_domain_name
+    domain_name = aws_s3_bucket.site_bucket.website_endpoint
     origin_id = local.vanhalaorg_origin_id
-
-    s3_origin_config {
-      origin_access_identity = aws_cloudfront_origin_access_identity.origin_access_identity.cloudfront_access_identity_path
+    custom_origin_config {
+      origin_protocol_policy = "http-only"
+      http_port = "80"
+      https_port = "443"
+      origin_ssl_protocols = ["TLSv1.2"]
     }
   }
 
   enabled = true
   is_ipv6_enabled = true
+  http_version = "http2"
   default_root_object = "index.html"
 
   default_cache_behavior {
