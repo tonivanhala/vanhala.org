@@ -65,7 +65,7 @@ title: CV
 |Fullstack developer for apartment rental service
 |JavaScript, React, Clojure, Elasticsearch, Contentful, Docker, AWS, Rancher
 
-|Project Lead
+|Project Lead and Fullstack Developer
 |05/2015 -- 08/2017
 |Large scale IoT data processing and data-driven fleet management for large machinery
 |Java, Spring, JavaScript, AngularJS, Spark, Cassandra, AWS
